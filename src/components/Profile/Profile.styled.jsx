@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Card = styled.div({
+export const Card = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -11,37 +11,37 @@ export const Card = styled.div({
   boxShadow: p => p.theme.shadows.normal + ' ' + p.theme.colors.black,
 });
 
-export const Description = styled.div({
+export const Description = styled('div')({
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
 });
 
-export const Name = styled.p({
+export const Name = styled('p')({
   color: p => p.theme.colors.text,
   fontSize: p => p.theme.fontSizes.m,
   fontWeight: p => p.theme.fontWeights.bold,
 });
 
-export const Tag = styled.p({
+export const Tag = styled('p')({
   color: p => p.theme.colors.primary,
   fontSize: p => p.theme.fontSizes.m,
   margin: p => p.theme.space[0],
 });
 
-export const Location = styled.p({
+export const Location = styled('p')({
   color: p => p.theme.colors.primary,
   fontSize: p => p.theme.fontSizes.m,
 });
 
-export const StatsList = styled.ul({
+export const StatsList = styled('ul')({
   display: 'flex',
   alignItems: 'center',
   listStyle: 'none',
   padding: p => p.theme.space[0] + 'px',
 });
 
-export const Stats = styled.li({
+export const Stats = styled('li')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

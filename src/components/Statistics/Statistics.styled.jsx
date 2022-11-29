@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import { getRandomHexColor } from 'components/constans/randomHexColor';
 
-export const Card = styled.section({
+export const Card = styled('section')({
   display: 'inline-flex',
   alignItems: 'center',
   flexDirection: 'column',
 });
 
-export const Title = styled.h2({
+export const Title = styled('h2')({
   color: p => p.theme.colors.text,
 });
 
-export const StatList = styled.ul({
+export const StatList = styled('ul')({
   display: 'flex',
 
   listStyle: 'none',
@@ -19,7 +19,7 @@ export const StatList = styled.ul({
   margin: p => p.theme.space[0] + 'px',
 });
 
-export const Stats = styled.li({
+export const Stats = styled('li')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
