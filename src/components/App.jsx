@@ -1,8 +1,8 @@
 import { Box } from './Box';
-import userData from './path/to/user.json';
-import dataStats from './path/to/data.json';
-import friends from './path/to/friends.json';
-import transactions from './path/to/transactions.json';
+import user from '../path/to/user.json';
+import dataStats from '../path/to/data.json';
+import friends from '../path/to/friends.json';
+import transactions from '../path/to/transactions.json';
 
 import {
   Profile,
@@ -21,7 +21,13 @@ export const App = () => {
       flexWrap="wrap"
       p={5}
     >
-      <Profile user={userData} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <Statistics title="Upload stats" stats={dataStats} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />

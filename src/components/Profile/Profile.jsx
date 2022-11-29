@@ -8,10 +8,14 @@ import {
   Stats,
   StatsList,
 } from './Profile.styled';
-import { iconSize } from 'components/constans/iconSizes';
+import { iconSize } from 'constans/iconSizes';
 
 export const Profile = ({
-  user: { username, tag, location, avatar, stats },
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
 }) => {
   return (
     <Card>
@@ -25,15 +29,15 @@ export const Profile = ({
       <StatsList>
         <Stats>
           <span>Followers</span>
-          <b>{stats.followers}</b>
+          <b>{followers}</b>
         </Stats>
         <Stats>
           <span>Views</span>
-          <b>{stats.views}</b>
+          <b>{views}</b>
         </Stats>
         <Stats>
           <span>likes</span>
-          <b>{stats.likes}</b>
+          <b>{likes}</b>
         </Stats>
       </StatsList>
     </Card>
@@ -41,15 +45,13 @@ export const Profile = ({
 };
 
 Profile.propTypes = {
-  user: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }).isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
   }).isRequired,
 };

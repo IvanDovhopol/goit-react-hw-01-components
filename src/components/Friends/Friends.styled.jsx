@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getRandomHexColor } from 'components/constans/randomHexColor';
+import { getRandomHexColor } from 'constans/randomHexColor';
 
 export const List = styled('ul')({
   display: 'grid',
